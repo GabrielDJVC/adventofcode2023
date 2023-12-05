@@ -3,13 +3,13 @@
 include_once("Utilities/Utilities.php");
 
 
-$arra_payload = openFile("Files/file_day_1.txt");
+$arr_payload = openFile("Files/file_day_1.txt");
 
 $int_total = 0;
 $str_numeric_value = "";
 $str_nouvelle_chaine = "";
 
-foreach ($arra_payload as $key => $value) {
+foreach ($arr_payload as $key => $value) {
     for ($i = 0; $i < strlen($value); $i++) {
         if (is_numeric($value[$i])) {
             $str_numeric_value .= $value[$i];  
