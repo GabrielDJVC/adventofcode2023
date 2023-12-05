@@ -78,7 +78,7 @@ echo '</pre>';
 
 
 
-echo '<pre>';
+/* echo '<pre>';
 var_dump($arra_final);
-echo '</pre>'; 
+echo '</pre>';  */
 // 12 red cubes, 13 green cubes, and 14 blue cubes
