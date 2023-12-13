@@ -5,7 +5,7 @@ include_once("Utilities/Utilities.php");
 
 $arr_payload = openFile("Files/day4.txt");
 
-$points_finaux = 0;
+$answer_part1 = 0;
 
 foreach ($arr_payload as $value) {
 
@@ -35,12 +35,12 @@ foreach ($arr_payload as $value) {
             }
         }
     }
-    $points_finaux += $points;
+    $answer_part1 += $points;
  
 
 }
 
 echo '<pre> ';
-var_dump($points_finaux);
+var_dump($answer_part1);
 echo '</pre>';
 
