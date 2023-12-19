@@ -6,6 +6,7 @@ set_time_limit(5);
 $arr_payload = openFile("Files/day9.txt");
 
 $answer1 = 0;
+$answer2 = 0;
 
 foreach ($arr_payload as $value) {
     
@@ -15,15 +16,16 @@ foreach ($arr_payload as $value) {
     $arr_values_to_add[] = $arr_value;
     $result = findSuite($arr_value, $arr_values_to_add);
 
-    $value_added = addNumber(array_reverse($result), $answer1);
+    $value_added = addNumber(array_reverse($result));
+
+    $value_added_reverse = addNumberReverse(array_reverse($result));
+    exit;
 }
 
 
 function findSuite($array, $array2)
 {
-
     $arr_result = [];
-
 
     if (empty(array_filter($array))) {
         // breakpoint
@@ -63,6 +65,23 @@ function addNumber($array)
     $last_index_of_last_array = count($array[$last_key]) -1 ;
     $answer1 += $array[$last_key][$last_index_of_last_array];
 
+}
+
+
+function addNumberReverse($array)
+{
+    global $answer2;
+
+    for ($i = 0; $i < count($array); $i++) {
+
+        if ($i != 0) {
+            
+            array_unshift($array[$i],7);
+        }
+        $array[0][] = 0;
+        echo "String $i: " . implode(" ", $array[$i]) . "<br />";
+
+    }
 }
 
 echo '<pre> <strong>Partie 1</strong> : ' . $answer1 . '</pre> ';
