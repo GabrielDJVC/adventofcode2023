@@ -76,7 +76,7 @@ function addNumberReverse($array)
 
         if ($i != 0) {
             
-            array_unshift($array[$i],7);
+            array_unshift($array[$i],7); // A AJOUTER LA SOUSTRACTION
         }
         $array[0][] = 0;
         echo "String $i: " . implode(" ", $array[$i]) . "<br />";
