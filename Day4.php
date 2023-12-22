@@ -44,8 +44,6 @@ foreach ($arr_payload as $value) {
         $arr_nb_of_new_cards[$card_nb + $i] += 1;
     }
    
-
-
     $answer_part1 += $points;
 }
 
